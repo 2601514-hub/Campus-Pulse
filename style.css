@@ -1,0 +1,223 @@
+/* Basic page design */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: white;
+}
+
+header #searchToggle {
+    display: inline-block;
+    margin: 10px 5px 10px 0;
+}
+
+header #searchInput {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+    text-align: left;
+}
+
+header h1 {
+    margin: 20px 0 10px;
+    color: #168bff;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 0 12px rgba(22, 139, 255, 0.7);
+}
+
+header p {
+    margin: 0;
+    color: #dddddd;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.map-section, .details-section {
+    background: #1c1c1c;
+    color: white;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #333333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+#map {
+    height: 520px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.note {
+    color: #bbbbbb;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font: inherit;
+    background: #292929;
+    color: white;
+}
+
+button {
+    margin-top: 12px;
+    padding: 10px 16px;
+    background: #168bff;
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0066cc;
+}
+
+.room {
+    padding: 10px;
+    margin: 8px 0;
+    background: #292929;
+    border-radius: 6px;
+    border: 1px solid #444444;
+}
+
+.Available {
+    color: #39d98a;
+    font-weight: bold;
+}
+
+.Occupied {
+    color: #ffb347;
+    font-weight: bold;
+}
+
+.Needs-Attention {
+    color: #ff5c5c;
+    font-weight: bold;
+}
+
+.issue {
+    padding: 10px;
+    margin: 8px 0;
+    border-left: 4px solid #168bff;
+    background: #292929;
+    border-radius: 5px;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #bbbbbb;
+}
+
+@media (max-width: 800px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+}
+
+    #map {
+        height: 380px;
+    }
+}
+.Available {
+    color: green;
+    font-weight: bold;
+}
+.Occupied {
+    color: orange;
+    font-weight: bold;
+}
+.Needs-Attention {
+    color: red;
+    font-weight: bold;
+}
+#searchInput {
+    width: 35px;
+    padding: 8px;
+    transition: width 0.3s;
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+#searchInput:hover,
+#searchInput:focus {
+    width: 280px;
+}
+#clearSearch {
+    display: none !important;
+    width: auto;
+    padding: 6px 10px;
+    margin: 5px 0;
+}
+header #searchInput {
+    display: block;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    width: 100%;
+}
+
+#searchToggle {
+    flex-shrink: 0;
+    margin: 0;
+}
+
+#searchInput {
+    display: none;
+    width: 280px;
+    margin: 0;
+    text-align: left;
+}
+#clearSearch {
+    display: none !important;
+    flex-shrink: 0;
+    margin: 0;
+}
+#searchInput {
+    display: none !important;
+    width: 280px;
+}
+
+.search-container:hover #searchInput,
+.search-container:focus-within #searchInput {
+    display: block !important;
+}
+header p {
+    text-align: center;
+    width: 100%;
+}

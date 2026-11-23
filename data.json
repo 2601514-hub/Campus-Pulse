@@ -1,0 +1,36 @@
+{
+    "buildings": [
+        {
+            "id": 1,
+            "name": "IT Building",
+            "latitude": 33.7148,
+            "longitude": 73.0254,
+            "description": "Sample information for the IT Building.",
+            "rooms": [
+                {"name": "Lab 101", "status": "Available"},
+                {"name": "Lab 102", "status": "Needs Attention"}
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Main Block",
+            "latitude": 33.7154,
+            "longitude": 73.0262,
+            "description": "Sample information for the Main Block.",
+            "rooms": [
+                {"name": "Room 201", "status": "Occupied"},
+                {"name": "Room 202", "status": "Available"}
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Library",
+            "latitude": 33.7141,
+            "longitude": 73.0268,
+            "description": "Sample information for the Library.",
+            "rooms": [
+                {"name": "Study Room 1", "status": "Available"}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Pulse</title>
+
+    <!-- Leaflet map design -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Our own CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Campus Pulse</h1>
+<div class="search-container">
+    <button id="searchToggle">🔍</button>
+    <input type="text" id="searchInput" placeholder="Search buildings or rooms...">
+    <button id="clearSearch">Clear Search</button>
+</div>
+<button id="clearSearch">Clear Search</button>
+        <p>Find a room. Check the lab. Report a problem.</p>
+    </header>
+
+    <main>
+        <section class="map-section">
+            <h2>Air University Campus Map</h2>
+            <p class="note">Demo building markers are approximate. Update their coordinates after checking an official campus map.</p>
+            <div id="map"></div>
+        </section>
+
+        <section class="details-section">
+            <h2>Building Information</h2>
+            <select id="roomFilter">
+    <option value="All">All Rooms</option>
+    <option value="Available">Available</option>
+    <option value="Occupied">Occupied</option>
+    <option value="Needs Attention">Needs Attention</option>
+</select>
+            <div id="buildingDetails">
+                <p>Select a building marker on the map to see its information.</p>
+            </div>
+
+            <h2>Report an Issue</h2>
+            <form id="issueForm">
+                <label for="issueBuilding">Building</label>
+                <select id="issueBuilding" required>
+                    <option value="">Choose a building</option>
+                </select>
+
+                <label for="issueDescription">Describe the problem</label>
+                <textarea id="issueDescription" rows="3"
+                          placeholder="Write the problem here..." required></textarea>
+
+                <button type="submit">Submit Report</button>
+            </form>
+
+            <h2>Admin Controls (Demo)</h2>
+            <p class="note">Choose a room and change its status. This is a simple demonstration panel, not a secure login system.</p>
+            <form id="adminForm">
+                <label for="adminBuilding">Building</label>
+                <select id="adminBuilding" required>
+                    <option value="">Choose a building</option>
+                </select>
+
+                <label for="adminRoom">Room / Lab</label>
+                <select id="adminRoom" required>
+                    <option value="">Choose a room</option>
+                </select>
+
+                <label for="newStatus">New status</label>
+                <select id="newStatus" required>
+                    <option value="Available">Available</option>
+                    <option value="Occupied">Occupied</option>
+                    <option value="Needs Attention">Needs Attention</option>
+                </select>
+
+                <button type="submit">Update Status</button>
+            </form>
+
+            <h2>Reported Issues</h2>
+            <div id="issueList">
+                <p>No issues reported yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Campus Pulse | Student project demo</p>
+    </footer>
+
+    <!-- Leaflet JavaScript library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Our own JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
+
